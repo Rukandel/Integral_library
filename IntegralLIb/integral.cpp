@@ -29,7 +29,7 @@ double trapezoid_method(double a, double b, int n) { // метод трапец�
     return sum * h;
 }
 
-double simpson_method(double a, double b, int n) { // метод Симпсона 
+double Simpson_method(double a, double b, int n) { // метод Симпсона 
     double h = (b - a) / n;
     double sum = f1(a) + f1(b);
     for (int i = 1; i < n; i++) {
@@ -40,7 +40,7 @@ double simpson_method(double a, double b, int n) { // метод Симпсон�
 }
 
 
-double euler(double x0, double y0, double xn, int n) { // метод Эйлера
+double Euler_method(double x0, double y0, double xn, int n) { // метод Эйлера
     double h = (xn - x0) / n;
     double x = x0, y = y0;
     for (int i = 1; i <= n; i++) {
@@ -54,7 +54,7 @@ double euler(double x0, double y0, double xn, int n) { // метод Эйлер�
     return y;
 }
 
-double verlet(double x0, double y0, double xn, int n) { // метод Верле
+double Verlet_method(double x0, double y0, double xn, int n) { // метод Верле
     double h = (xn - x0) / n;
     double x = x0, y = y0;
     double k1 = f2(x, y);
