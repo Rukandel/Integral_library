@@ -1,10 +1,10 @@
-﻿#include <iostream>
+#include <iostream>
 #include <cmath>
 #include "integral.h"
 using namespace std;
 
 
-int main() { //  функция запуска методов вычисления 
+int main() { // пример вызова
     int method;
     double a, b;
     int n, x0 = 0, y0 = 0, x = 0;
@@ -25,9 +25,12 @@ int main() { //  функция запуска методов вычислени
         cout << "Integral value: " << result << endl;
     case 2: result = trapezoid_method(a, b, n);
         cout << "Integral value: " << result << endl;
+    case 3: result = Simpson_method(double a, double b, int n);
+        cout << "Integral value: " << result << endl;
+    case 4: result = Euler_method(double x0, double y0, double xn, int n);
+        cout << "Integral value: " << result << endl;
+    case 5: result = Verlet_method(double x0, double y0, double xn, int n);
+        cout << "Integral value: " << result << endl;
     }
-    
-
-
-    return 0;
+     return 0;
 }
