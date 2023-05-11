@@ -4,12 +4,12 @@ double M_PI = 3.14159265358979323846;
 
 
 double f1(double x) {
-    return sin(x); // пример функции, здесь на вход подается формула для интегрирования
+    return sin(x); // РїСЂРёРјРµСЂ С„СѓРЅРєС†РёРё, Р·РґРµСЃСЊ РЅР° РІС…РѕРґ РїРѕРґР°РµС‚СЃСЏ С„РѕСЂРјСѓР»Р° РґР»СЏ РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ 1-3 РјРµС‚РѕРґРѕРј
 }
-double f2(double x, double y) {
-    return x * y; 
+double f2(double x, double y) { 
+    return x * y;  // РїСЂРёРјРµСЂ С„СѓРЅРєС†РёРё, Р·РґРµСЃСЊ РЅР° РІС…РѕРґ РїРѕРґР°РµС‚СЃСЏ С„РѕСЂРјСѓР»Р° РґР»СЏ РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ 4-5 РјРµС‚РѕРґРѕРј
 }
-double rectangle_method(double a, double b, int n) { // метод треугольнков 
+double rectangle_method(double a, double b, int n) { // РјРµС‚РѕРґ С‚СЂРµСѓРіРѕР»СЊРЅРєРѕРІ 
     double h = (b - a) / n;
     double sum = 0;
     for (int i = 0; i < n; i++) {
@@ -19,7 +19,7 @@ double rectangle_method(double a, double b, int n) { // метод треугольнков
     return sum;
 }
 
-double trapezoid_method(double a, double b, int n) { // метод трапеций
+double trapezoid_method(double a, double b, int n) { // РјРµС‚РѕРґ С‚СЂР°РїРµС†РёР№
     double h = (b - a) / n;
     double sum = 0.5 * (f1(a) + f1(b));
     for (int i = 1; i < n; i++) {
@@ -29,7 +29,7 @@ double trapezoid_method(double a, double b, int n) { // метод трапеций
     return sum * h;
 }
 
-double simpson_method(double a, double b, int n) { // метод Симпсона 
+double simpson_method(double a, double b, int n) { // РјРµС‚РѕРґ РЎРёРјРїСЃРѕРЅР° 
     double h = (b - a) / n;
     double sum = f1(a) + f1(b);
     for (int i = 1; i < n; i++) {
@@ -40,7 +40,7 @@ double simpson_method(double a, double b, int n) { // метод Симпсона
 }
 
 
-double euler(double x0, double y0, double xn, int n) { // метод Эйлера
+double euler(double x0, double y0, double xn, int n) { // РјРµС‚РѕРґ Р­Р№Р»РµСЂР°
     double h = (xn - x0) / n;
     double x = x0, y = y0;
     for (int i = 1; i <= n; i++) {
@@ -54,7 +54,7 @@ double euler(double x0, double y0, double xn, int n) { // метод Эйлера
     return y;
 }
 
-double verlet(double x0, double y0, double xn, int n) { // метод Верле
+double verlet(double x0, double y0, double xn, int n) { // РјРµС‚РѕРґ Р’РµСЂР»Рµ
     double h = (xn - x0) / n;
     double x = x0, y = y0;
     double k1 = f2(x, y);
