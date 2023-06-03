@@ -7,7 +7,7 @@ using namespace std;
 int main() { // пример вызова
     int method;
     double a, b;
-    int n, x0 = 0, y0 = 0, x = 0;
+    int n, x0 = 0, y0 = 0, x = 0, xn = 0;
     cout << "Choose integration method:" << endl;
     cout << "1 - Rectangle method" << endl;
     cout << "2 - Trapezoid method" << endl;
@@ -25,12 +25,12 @@ int main() { // пример вызова
         cout << "Integral value: " << result << endl;
     case 2: result = trapezoid_method(a, b, n);
         cout << "Integral value: " << result << endl;
-    case 3: result = Simpson_method(double a, double b, int n);
+    case 3: result = Simpson_method( a,  b,  n);
         cout << "Integral value: " << result << endl;
-    case 4: result = Euler_method(double x0, double y0, double xn, int n);
+    case 4: result = Euler_method (x0,  y0,  xn,  n);
         cout << "Integral value: " << result << endl;
-    case 5: result = Verlet_method(double x0, double y0, double xn, int n);
+    case 5: result = Verlet_method( x0,  y0,  xn,  n);
         cout << "Integral value: " << result << endl;
     }
-     return 0;
+    return 0;
 }
